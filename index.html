@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-Library</title> <!-- Changed Title -->
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Optional: Add custom Tailwind config if needed for theme colors etc.
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F59E0B', // Amber 500 - Keeping the warm primary color
+                        secondary: '#1F2937', // Gray 800 - Dark contrast
+                        accent: '#10B981', // Emerald 500 - For secondary elements like Non-Fiction
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Using a common font stack or importing a specific one */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Apply the imported font */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header/Navigation -->
+    <header class="bg-secondary text-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Changed Library Name -->
+            <a href="#" class="text-2xl font-bold text-primary">H-Library</a>
+            <div class="space-x-4 md:space-x-6">
+                <a href="#home" class="hover:text-primary transition duration-200">Home</a>
+                <a href="#categories" class="hover:text-primary transition duration-200">Categories</a>
+                <a href="#new-arrivals" class="hover:text-primary transition duration-200">New Arrivals</a>
+                <a href="#about" class="hover:text-primary transition duration-200">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Generic text, fits well) -->
+    <section id="home" class="bg-gradient-to-r from-primary via-amber-400 to-orange-400 text-white py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md">Discover Your Next Favorite Book</h1>
+            <p class="text-lg md:text-xl mb-8">Explore worlds, gain knowledge, find inspiration.</p>
+            <a href="#categories"
+                class="bg-white text-secondary font-semibold py-2 px-6 rounded-full hover:bg-gray-200 transition duration-300 shadow">Browse
+                Now</a>
+        </div>
+    </section>
+
+    <!-- Book Categories Section -->
+    <section id="categories" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-secondary">Browse by Category</h2>
+
+            <!-- Category: Fiction -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 border-l-4 border-primary pl-3 text-secondary">Fiction</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Book Card Example 1 -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transition transform hover:scale-105 duration-300">
+                        <img src="https://placehold.co/300x400/F59E0B/white?text=Fiction+Book+1" alt="Book Cover 1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1">The Midnight Library</h4>
+                            <p class="text-gray-600 text-sm mb-3">Matt Haig</p>
+                            <p class="text-gray-700 text-sm">A novel about choices, regrets, and the infinite
+                                possibilities of life.</p>
+                            <a href="#"
+                                class="inline-block mt-3 bg-primary text-white text-sm px-4 py-1 rounded hover:bg-amber-600 transition duration-200">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <!-- Book Card Example 2 -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transition transform hover:scale-105 duration-300">
+                        <img src="https://placehold.co/300x400/F59E0B/white?text=Fiction+Book+2" alt="Book Cover 2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1">Project Hail Mary</h4>
+                            <p class="text-gray-600 text-sm mb-3">Andy Weir</p>
+                            <p class="text-gray-700 text-sm">An astronaut wakes up light years from home with amnesia.
+                            </p>
+                            <a href="#"
+                                class="inline-block mt-3 bg-primary text-white text-sm px-4 py-1 rounded hover:bg-amber-600 transition duration-200">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <!-- Book Card Example 3 -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transition transform hover:scale-105 duration-300">
+                        <img src="https://placehold.co/300x400/F59E0B/white?text=Fiction+Book+3" alt="Book Cover 3"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1">Klara and the Sun</h4>
+                            <p class="text-gray-600 text-sm mb-3">Kazuo Ishiguro</p>
+                            <p class="text-gray-700 text-sm">An Artificial Friend explores the complexities of love and
+                                humanity.</p>
+                            <a href="#"
+                                class="inline-block mt-3 bg-primary text-white text-sm px-4 py-1 rounded hover:bg-amber-600 transition duration-200">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <!-- Add more book cards for Fiction if needed -->
+                </div>
+            </div>
+
+            <!-- Category: Non-Fiction -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 border-l-4 border-accent pl-3 text-secondary">Non-Fiction</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Book Card Example 1 -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transition transform hover:scale-105 duration-300">
+                        <img src="https://placehold.co/300x400/10B981/white?text=Non-Fiction+1" alt="Book Cover NF1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1">Sapiens: A Brief History</h4>
+                            <p class="text-gray-600 text-sm mb-3">Yuval Noah Harari</p>
+                            <p class="text-gray-700 text-sm">Exploring the history and impact of humankind.</p>
+                            <a href="#"
+                                class="inline-block mt-3 bg-accent text-white text-sm px-4 py-1 rounded hover:bg-emerald-600 transition duration-200">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <!-- Book Card Example 2 -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg overflow-hidden transition transform hover:scale-105 duration-300">
+                        <img src="https://placehold.co/300x400/10B981/white?text=Non-Fiction+2" alt="Book Cover NF2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-1">Atomic Habits</h4>
+                            <p class="text-gray-600 text-sm mb-3">James Clear</p>
+                            <p class="text-gray-700 text-sm">Tiny changes, remarkable results for building good habits.
+                            </p>
+                            <a href="#"
+                                class="inline-block mt-3 bg-accent text-white text-sm px-4 py-1 rounded hover:bg-emerald-600 transition duration-200">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <!-- Add more book cards for Non-Fiction if needed -->
+                </div>
+            </div>
+            <!-- Add more categories as needed -->
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section id="new-arrivals" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-secondary">New Arrivals</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- New Book Card Example 1 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden relative transition transform hover:scale-105 duration-300">
+                    <span
+                        class="absolute top-2 right-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">NEW</span>
+                    <img src="https://placehold.co/300x400/EF4444/white?text=New+Arrival+1" alt="New Book Cover 1"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-lg font-semibold mb-1">The Latest Thriller</h4>
+                        <p class="text-gray-600 text-sm mb-3">Jane Doe</p>
+                        <p class="text-gray-700 text-sm">A recently released page-turner you won't want to miss.</p>
+                        <a href="#"
+                            class="inline-block mt-3 bg-secondary text-white text-sm px-4 py-1 rounded hover:bg-gray-700 transition duration-200">View
+                            Details</a>
+                    </div>
+                </div>
+                <!-- New Book Card Example 2 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden relative transition transform hover:scale-105 duration-300">
+                    <span
+                        class="absolute top-2 right-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">NEW</span>
+                    <img src="https://placehold.co/300x400/EF4444/white?text=New+Arrival+2" alt="New Book Cover 2"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-lg font-semibold mb-1">Future Worlds</h4>
+                        <p class="text-gray-600 text-sm mb-3">Alex Future</p>
+                        <p class="text-gray-700 text-sm">A brand new sci-fi adventure exploring artificial intelligence.
+                        </p>
+                        <a href="#"
+                            class="inline-block mt-3 bg-secondary text-white text-sm px-4 py-1 rounded hover:bg-gray-700 transition duration-200">View
+                            Details</a>
+                    </div>
+                </div>
+                <!-- New Book Card Example 3 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden relative transition transform hover:scale-105 duration-300">
+                    <span
+                        class="absolute top-2 right-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">NEW</span>
+                    <img src="https://placehold.co/300x400/EF4444/white?text=New+Arrival+3" alt="New Book Cover 3"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-lg font-semibold mb-1">Mastering Mindfulness</h4>
+                        <p class="text-gray-600 text-sm mb-3">Dr. Calm</p>
+                        <p class="text-gray-700 text-sm">Freshly published guide to finding peace in a busy world.</p>
+                        <a href="#"
+                            class="inline-block mt-3 bg-secondary text-white text-sm px-4 py-1 rounded hover:bg-gray-700 transition duration-200">View
+                            Details</a>
+                    </div>
+                </div>
+                <!-- Add more new arrival book cards if needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4 text-center max-w-3xl">
+            <!-- Changed Library Name -->
+            <h2 class="text-3xl font-bold mb-6 text-secondary">About H-Library</h2>
+            <!-- Changed Library Name -->
+            <p class="text-lg text-gray-700 mb-4">
+                Welcome to H-Library, your cozy corner on the web for discovering captivating reads. We believe in the
+                power of stories to transport, educate, and inspire.
+            </p>
+            <p class="text-lg text-gray-700">
+                Browse our curated collections and find your next adventure between the pages. Happy reading!
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Changed Library Name -->
+            <p>© 2025 H-Library. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Powered by Hilawi</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-primary">Privacy Policy</a>
+                <a href="#" class="hover:text-primary">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
